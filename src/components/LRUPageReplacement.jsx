@@ -265,50 +265,6 @@ const LRUPageReplacement = () => {
                 </table>
               </div>
             </div>
-
-            {/* Visual Memory State */}
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-6">Memory Frame Visualization</h2>
-              <div className="space-y-4">
-                {result.steps.map((step, index) => (
-                  <div key={index} className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
-                    <div className="w-16 text-center font-medium">
-                      Step {index + 1}
-                    </div>
-                    <div className="w-20 text-center">
-                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-mono">
-                        {step.pageRequest}
-                      </span>
-                    </div>
-                    <div className="flex space-x-2">
-                      {Array.from({ length: parseInt(numFrames) }).map((_, frameIndex) => (
-                        <div
-                          key={frameIndex}
-                          className={`w-12 h-12 border-2 rounded-lg flex items-center justify-center font-mono ${
-                            step.afterMemory[frameIndex] !== undefined
-                              ? step.afterMemory[frameIndex] === step.pageRequest && step.isFault
-                                ? 'border-red-500 bg-red-100 text-red-800'
-                                : step.afterMemory[frameIndex] === step.pageRequest && step.isHit
-                                ? 'border-green-500 bg-green-100 text-green-800'
-                                : 'border-gray-300 bg-white'
-                              : 'border-gray-300 bg-gray-100'
-                          }`}
-                        >
-                          {step.afterMemory[frameIndex] || '-'}
-                        </div>
-                      ))}
-                    </div>
-                    <div className="ml-4">
-                      {step.isHit ? (
-                        <span className="text-green-600 font-medium">✓ Hit</span>
-                      ) : (
-                        <span className="text-red-600 font-medium">✗ Fault</span>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         )}
       </div>
