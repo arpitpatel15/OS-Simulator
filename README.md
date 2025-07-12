@@ -2,6 +2,7 @@
 An interactive React-based web application that simulates core Operating System algorithms with visual and dynamic user input support. This tool helps students, educators, and enthusiasts to better understand how OS algorithms work under the hood.
 
 🚀 Features
+
 📁 FCFS Disk Scheduling
 Visualize how the First-Come-First-Serve disk scheduling algorithm processes requests.
 
