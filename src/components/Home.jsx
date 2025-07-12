@@ -1,8 +1,7 @@
-import React from 'react';
+import React from 'react'
 import { Link } from 'react-router-dom';
 import { HardDrive, Clock, FileText, Users } from 'lucide-react';
-
-const Dashboard = () => {
+const Home = () => {
   const algorithms = [
     {
       title: 'FCFS Disk Scheduling',
@@ -95,6 +94,6 @@ const Dashboard = () => {
       </div>
     </div>
   );
-};
+}
 
-export default Dashboard;
+export default Home

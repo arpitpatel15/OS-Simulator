@@ -4,13 +4,13 @@ import FCFSDiskScheduling from './components/FCFSDiskScheduling';
 import PriorityScheduling from './components/PriorityScheduling';
 import LRUPageReplacement from './components/LRUPageReplacement';
 import ReaderWriterProblem from './components/ReaderWriterProblem';
-import Dashboard from './components/DashBoard';
+import Home from './components/Home';
 const App = () => {
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         <Routes>
-          <Route path="/" element={<Dashboard/>} />
+          <Route path="/" element={<Home/>} />
           <Route path="/fcfs-disk" element={<FCFSDiskScheduling />} />
           <Route path="/priority-scheduling" element={<PriorityScheduling />} />
           <Route path="/lru-page" element={<LRUPageReplacement />} />
